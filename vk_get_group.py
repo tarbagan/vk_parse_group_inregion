@@ -44,7 +44,7 @@ def multi_search():
 
 def save_cvs(): #Сохраняем результат в файл CVS
     datagroup = multi_search()
-    with open( "d:/AnacodaProgect/group.csv", "w", encoding='utf-8' ) as file:
+    with open( "d:/AnacodaProgect/group.csv", "w", encoding='utf-8' ) as file: #Укажите путь к ашему файлу cvs
         fieldnames = ['id', 'name', 'is_closed', 'type', 'photo_200', 'city', 'follower', 'url']
         writer = csv.DictWriter( file, fieldnames=fieldnames )
         writer.writeheader()
